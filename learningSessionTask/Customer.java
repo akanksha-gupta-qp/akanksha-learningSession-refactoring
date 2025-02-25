@@ -4,17 +4,17 @@ import static CustomerTypeEnum
 
 class Customer {
     String name;
-    String type;
+    String customerType;
     double discount;
 
-    public Customer(String name, String type) {
+    public Customer(String name, String customerType) {
         this.name = name;
-        this.type = type;
-        setDiscount(type);
+        this.customerType = customerType;
+        setDiscount(customerType);
     }
 
-    public void setDiscount(String type) {
-        switch (String type) {
+    public void setDiscount(String customerType) {
+        switch (String customerType) {
             case CustomerTypeEnum.REGULAR.getColumnName():
                 RegularCustomer.calculateDiscount();
                 break;
