@@ -14,12 +14,18 @@ class Customer {
     }
 
     public void setDiscount() {
-        if (type.equals(CustomerTypeEnum.REGULAR.getColumnName())) {
-             discount = RegularCustomer.getDiscount();
-        } else if (CustomerTypeEnum.PREMIUM.getColumnName()) {
-            discount = 0.1;
-        } else if (CustomerTypeEnum.VIP.getColumnName() {
-            discount = 0.2;
+        switch () {
+            case CustomerTypeEnum.REGULAR.getColumnName():
+                RegularCustomer.calculateDiscount(amount)
+                break;
+            case CustomerTypeEnum.PREMIUM.getColumnName():
+                PremiumCustomer.calculateDiscount(amount)
+
+                break;
+            case CustomerTypeEnum.VIP.getColumnName():
+                VIPCustomer.calculateDiscount(amount)
+            default:
+                0
         }
     }
 }
