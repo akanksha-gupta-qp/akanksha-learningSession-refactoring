@@ -1,5 +1,5 @@
 class PremiumCustomer implements Discount {
-    public double calculateDiscount(double amount) {
-        return amount*ContentTypeEnum.PREMIUM.getDiscount();
+    public double calculateDiscount() {
+        return ContentTypeEnum.PREMIUM.getDiscount();
     }
 }

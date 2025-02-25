@@ -10,19 +10,19 @@ class Customer {
     public Customer(String name, String type) {
         this.name = name;
         this.type = type;
-        setDiscount(type, amount);
+        setDiscount(type);
     }
 
-    public void setDiscount(String type, double amount) {
+    public void setDiscount(String type) {
         switch (String type) {
             case CustomerTypeEnum.REGULAR.getColumnName():
-                RegularCustomer.calculateDiscount(amount)
+                RegularCustomer.calculateDiscount();
                 break;
             case CustomerTypeEnum.PREMIUM.getColumnName():
-                PremiumCustomer.calculateDiscount(amount)
+                PremiumCustomer.calculateDiscount();
                 break;
             case CustomerTypeEnum.VIP.getColumnName():
-                VIPCustomer.calculateDiscount(amount)
+                VIPCustomer.calculateDiscount();
             default:
                 0
         }
